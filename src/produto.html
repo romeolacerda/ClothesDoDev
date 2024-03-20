@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+    <style>
+      body {
+        font-family: "Roboto Condensed";
+      }
+    </style>
+    <title>DoDev Clothes</title>
+    <script src="./js/index.js" defer></script>
+  </head>
+  <body onload="productTypeInfos()">
+    <div class="container">
+      <header>
+        <div class="navBar">
+          <div class="navBarOptions">
+            <p class="navBarA">DoDev Clothes</p>
+            <a class="navBarA" href="./home.html">Home</a>
+            <a class="navBarA" href="./sobre.html">Sobre nós</a>
+            <div class="menu-icon" onclick="toggleMenu()">
+              <img src="./imgs/store_FILL0_wght400_GRAD0_opsz24.svg" alt="Menu" />
+            </div>
+            <div class="dropdown-menu" id="dropdownMenu">
+              <p>DoDev Clothes</p>
+              <a href="./home.html">Home</a
+              <a href="./sobre.html">Sobre nós</a>
+            </div>
+          </div>
+  
+          <!-- shopping cart -->
+          <div class="shooppingCart">
+            <a onclick="toggleCart()">
+              <img id="cartIcon "
+                src="./imgs/shopping_cart_FILL0_wght400_GRAD0_opsz24.svg"
+                alt="cartIcon"
+              />
+            </a>
+            <span></span>
+          </div>
+        </div>
+      </header>
+      <div class="cartTab">
+        <h1>shoopping Cart</h1>
+        <div class="listCart">
+          <div class="cartItem">
+            <div class="productName">
+              <span class="minus">Nome: </span>
+            </div>
+            <div class="Quantity">
+              <span class="minus">Quantity: </span>
+            </div>
+            <div class="Price">
+              <span class="minus">Price: </span>
+            </div>
+          </div>
+        </div>
+  
+        <div class="btn">
+          <button class="checkOut">Check out</button>
+        </div>
+      </div>
+      <section class="productContent">
+        <div class="productImages">
+          <img class="productMainImage" src="" alt="">
+          <div class="productSubImages">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+          </div>
+        </div>
+        <div class="productInfos">
+          <h3 class="productInfoName"></h3>
+          <h2></h2>
+            <div class="quantityButtons">
+              <button class="quantityButton minus" onclick="decrementQuantity()">-</button>
+              <span class="quantity">1</span>
+              <button class="quantityButton plus" onclick="incrementQuantity()">+</button>
+            </div>
+        <button onclick="addToCart()">Adicionar ao Carrinho</button>
+        </div>
+      </section>
+      <form class="promotions">
+        <!-- formulario -->
+        <h2>Receba Promoções!</h2>
+        <div class="promotionsForm">
+          <div><label for="name">Qual o seu nome? </label>
+          <input type="text" name="name" id="name" /></div>
+          <div><label for="email">Qual o seu email? </label>
+          <input type="text" name="email" id="email" /></div>
+          <div><label for="phoneNumber">Qual seu número?</label>
+          <input type="text" name="phoneNumber" id="phoneNumber" /></div>
+          <div><label for=""></label>
+          <button type="submit" id="promotionsBtn">Quero receber!</button></div>
+        </div>
+      </form>
+      <footer>
+        <div class="footerBar">
+          <div class="footerOptions">
+            <p>DoDev Clothes</p>
+            <a href="./home.html">Home</a>
+            <a href="./sobre.html">Sobre nós</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
